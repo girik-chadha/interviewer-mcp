@@ -1,0 +1,31 @@
+# Interviewer MCP
+
+> MCP server + Claude Skill that teaches you your own GitHub repos section by section, then mock-interviews you on them in character — and tracks per-section weakness across sessions, so returning interviews re-attack exactly what you couldn't explain. Local-first, zero native deps, MIT.
+
+Ships two ways: an MCP server (`npx interviewer-mcp`, durable local mastery store in ~/.interviewer-mcp/) and a standalone Claude Skill (SKILL.md upload to claude.ai; per-session repo clone, memory via conversation search). 8 MCP tools: ingest_repo, list_sections, get_code_section, mark_covered, get_interview_targets, log_interview_result, set_job_description, get_progress. Every tool error includes a `hint` field with the corrective next call.
+
+## Install (copy-paste-runnable)
+
+- Claude Code: `claude mcp add interviewer -- npx -y interviewer-mcp`
+- With token (private repos, 5000 req/hr): `claude mcp add interviewer --env GITHUB_TOKEN=... -- npx -y interviewer-mcp`
+- Claude Desktop: add `{"command": "npx", "args": ["-y", "interviewer-mcp"]}` under `mcpServers.interviewer`
+- claude.ai Skill: zip a folder `interview-prepper/` containing SKILL.md, upload under Settings → Capabilities → Skills
+- Agent-driven install steps: [SETUP_GUIDE.md](SETUP_GUIDE.md)
+
+## Docs
+
+- [README.md](README.md): Product overview, both install paths, tool table, demo transcript.
+- [ARCHITECTURE.md](ARCHITECTURE.md): Ingestion pipeline, code-map ordering, JSON store guarantees (locking, atomic writes, corruption quarantine), mastery scoring model, design rationale.
+- [SKILL.md](SKILL.md): The Claude Skill — full 5-phase curriculum prompt (briefing, bootcamp, code deep-dive, mock interview, debrief).
+- [SETUP_GUIDE.md](SETUP_GUIDE.md): Step-by-step install instructions written for AI agents.
+- [CONTRIBUTING.md](CONTRIBUTING.md): Dev setup, test command, PR expectations.
+- [SECURITY.md](SECURITY.md): Reporting, local-first security model, token handling.
+- [CHANGELOG.md](CHANGELOG.md): Release history.
+
+## Key facts
+
+- Data location: `~/.interviewer-mcp/store.json`, override with `INTERVIEWER_DATA_DIR`.
+- GitHub auth: optional; both classic and fine-grained PATs work (authenticated file fetches use the Contents API with the raw media type).
+- Ingest caps: 120 source files, 100KB/file; skipped files are always reported, GitHub tree truncation surfaces as a warning.
+- Weakness scoring: weak +1.0, okay +0.25, strong −0.5 (floor 0), per section; re-ingest preserves coverage, weakness, and interview history.
+- Requires Node >= 20. Runtime deps: @modelcontextprotocol/sdk, zod only.
