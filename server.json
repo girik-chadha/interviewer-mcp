@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.girik-chadha/interviewer-mcp",
+  "description": "Full technical interview prep: company briefing, concepts, code deep-dive, mock interviews.",
+  "repository": {
+    "url": "https://github.com/girik-chadha/interviewer-mcp",
+    "source": "github"
+  },
+  "version": "0.4.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "interviewer-mcp",
+      "version": "0.4.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "description": "GitHub personal access token (classic or fine-grained). Optional for public repos, raises rate limit from 60 to 5000 req/hr, required for private repos.",
+          "isRequired": false,
+          "format": "string",
+          "isSecret": true,
+          "name": "GITHUB_TOKEN"
+        }
+      ]
+    }
+  ]
+}
