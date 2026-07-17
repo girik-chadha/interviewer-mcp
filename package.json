@@ -4,14 +4,14 @@
   "description": "MCP server that teaches you your own GitHub repos, then mock-interviews you on them — and remembers your weak spots across sessions.",
   "license": "MIT",
   "author": "Girik Chadha",
-  "mcpName": "io.github.girikchadha24/interviewer-mcp",
+  "mcpName": "io.github.girik-chadha/interviewer-mcp",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/girikchadha24/interviewer-mcp.git"
+    "url": "git+https://github.com/girik-chadha/interviewer-mcp.git"
   },
-  "homepage": "https://github.com/girikchadha24/interviewer-mcp#readme",
+  "homepage": "https://github.com/girik-chadha/interviewer-mcp#readme",
   "bugs": {
-    "url": "https://github.com/girikchadha24/interviewer-mcp/issues"
+    "url": "https://github.com/girik-chadha/interviewer-mcp/issues"
   },
   "type": "module",
   "bin": {

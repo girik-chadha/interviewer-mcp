@@ -12,7 +12,7 @@ Public-release hardening. No changes to teaching, interviewing, or mastery-track
 - `set_job_description` input is capped at 20k chars; truncation is reported in the response.
 
 **Packaging & tooling**
-- `package.json` is publish-ready: author, repository/homepage/bugs, registry `mcpName` (`io.github.girikchadha24/interviewer-mcp`).
+- `package.json` is publish-ready: author, repository/homepage/bugs, registry `mcpName` (`io.github.girik-chadha/interviewer-mcp`).
 - Node >= 20 (18 is EOL); CI matrix now 20/22/24. vitest 4 (clears all `npm audit` findings). Regenerated lockfile fixes `npm ci`.
 
 **Docs**

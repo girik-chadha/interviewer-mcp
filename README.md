@@ -3,13 +3,13 @@
 **A technical interviewer that has actually read your repos — teaches you your own code, drills you on it, and remembers every answer you flubbed.**
 
 <p>
-  <a href="https://github.com/girikchadha24/interviewer-mcp/actions/workflows/ci.yml"><img src="https://github.com/girikchadha24/interviewer-mcp/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/girik-chadha/interviewer-mcp/actions/workflows/ci.yml"><img src="https://github.com/girik-chadha/interviewer-mcp/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="https://www.npmjs.com/package/interviewer-mcp"><img src="https://img.shields.io/npm/v/interviewer-mcp.svg" alt="npm"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
   <img src="https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg" alt="Node >=20">
 </p>
 
-<!-- mcp-name: io.github.girikchadha24/interviewer-mcp -->
+<!-- mcp-name: io.github.girik-chadha/interviewer-mcp -->
 
 [Install](#get-started-60-seconds) · [Demo](#what-a-session-looks-like) · [Tools](#tools-8) · [Architecture](ARCHITECTURE.md) · [llms.txt](llms.txt)
 

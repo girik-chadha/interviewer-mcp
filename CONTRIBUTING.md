@@ -7,7 +7,7 @@ Thanks for the interest! The codebase is intentionally small and readable.
 Requires Node >= 20.
 
 ```bash
-git clone https://github.com/girikchadha24/interviewer-mcp
+git clone https://github.com/girik-chadha/interviewer-mcp
 cd interviewer-mcp
 npm install
 npm test        # vitest — core logic + mocked GitHub fetch paths

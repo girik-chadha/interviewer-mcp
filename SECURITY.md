@@ -6,7 +6,7 @@ Only the latest published release on npm receives security fixes.
 
 ## Reporting a vulnerability
 
-Please report vulnerabilities privately via [GitHub Security Advisories](https://github.com/girikchadha24/interviewer-mcp/security/advisories/new) — do not open a public issue. You can expect an acknowledgement within a few days.
+Please report vulnerabilities privately via [GitHub Security Advisories](https://github.com/girik-chadha/interviewer-mcp/security/advisories/new) — do not open a public issue. You can expect an acknowledgement within a few days.
 
 ## Security model
 
